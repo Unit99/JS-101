@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 101 Revision</title>
+</head>
+
+<body>
+    <p id="hero" class="title text demo green"></p>
+    <script>
+        'use strict';
+
+        console.clear();
+
+    //     let obj = {
+    //         a: 1,
+    //         b: 2,
+    //         c: 3
+    //     };
+
+    //     console.table(obj);
+
+    //     console.warn('Hello, this is a warning');
+    //     console.error('Hello, this is an error');
+
+    //     console.time('Hello');
+
+    //     console.log('Hello world');
+    //     console.log('Hello world');
+    //     console.log('Hello world');
+    //     console.log('Hello world');
+    //     console.log('Hello world');
+
+    //     console.timeEnd('Hello');
+
+    //     let person;
+
+    //     person = 'Ram';
+    //     console.log(person);
+
+    //     person = 'Sanjib';
+    //     console.log(person);
+
+    //     const job = 'designer';
+    //     console.log(job);
+
+    //     // job = 'developer';
+    //     // console.log(job);
+
+    //     const member = {
+    //         name: 'Sanjib',
+    //         age: 39
+    //     };
+
+    //     member.name = 'Baishali';
+    //     member.age = 35;
+
+    //     console.table(member);
+
+    //     const numbers = [1, 2, 3, 4, 5];
+
+    //     numbers.pop(5);
+
+    //     console.log(numbers);
+    //     console.log(numbers.indexOf(4));
+
+    //     let val;
+
+    //     val = Number('100.30');
+    //     console.log(val.toFixed(2));
+
+    //     let str;
+
+    //     // str = ({name: 'Sanjib', age: 32}).toString();
+    //     // console.log(str);/
+
+    //     str = parseFloat('100.30').toFixed(2);
+    //     str = parseInt('100.30');
+    //     console.log(str);
+
+    //     //type coercion
+    //     let val1 = String('5');
+    //     let val2 = 12;
+
+    //     const sum = Number(val1 + val2);
+    //     console.log(sum);
+    //     console.log(sum instanceof Array);
+
+    //     val1 = Math.ceil(Math.random() * 40 + 1);
+    //     console.log(val1);
+
+
+    //     val1 = String([1, 2, 3, 4]);
+    //     console.log(val1);
+
+    //     document.querySelector('p').innerHTML = val1;
+
+    //     let para = document.querySelector('p');
+    //     console.log(para);
+
+    //     para.innerHTML = para.classList;
+
+    //     const firstName = 'Baishali';
+    //     const lastName = 'Adhya';
+    //     const age = 35;
+
+    //     let fullName;
+
+    //     fullName = 'I\'m ' + firstName + ' ' + lastName;
+    //     document.querySelector('p').innerHTML = fullName;
+
+    //     let name2;
+    //     name2 = 'Sanjib';
+    //     //name2 += ' Adhya';
+
+    //     console.log(name2);
+    //     console.log(firstName[2]);
+    //     console.log(name2.indexOf('1'));
+    //     console.log(name2.charAt('2'));
+
+    //     let lastChar = firstName.charAt(firstName.length - 1);
+    //     document.querySelector('p').innerText =  lastChar;
+
+    //     let testName = firstName.split('');
+    //     console.log(testName);
+
+    //     console.log(firstName.charAt(4));
+
+    //     let newName = firstName.replace('Baishali', 'Margot');
+    //     console.log(newName);
+    //     console.log(firstName.includes('Benzema'));
+
+    //     const myName = 'Harry';
+    //     const myJob = 'web developer';
+    //     const myAge = 32;
+
+    //     let html;
+
+    //     function hello(){
+    //         return 'hello';
+    //     }
+
+    //     //hello();
+
+    //     html = `
+    //     <ul>
+    //         <li>Name: ${myName}</li>
+    //         <li>Job: ${myJob}</li> 
+    //         <li>Job: ${myAge}</li> 
+    //         <li>${hello()}</li>
+    //         <li>${myAge > 30 ? 'Over 30': 'Under 30' }</li>
+    //     </ul>
+    //     `;
+
+    //     document.querySelector('p').innerHTML = hello();
+
+
+    //     let arr = [1,2,3,4];
+    //     const arrNum = new Array(22,3,45,56,89,34);
+
+    //     console.log(typeof arr);
+    //     console.log(arr instanceof Array);
+    //     console.log(Array.isArray(arr));
+
+    //     console.log(arr[3]);
+
+    //     //arr[4] = 5;
+
+    //     console.log(arr.indexOf(3));
+    //     //console.log(arr);
+
+    //     arr.unshift('Sanjib');
+    //     console.table(arr);
+    //     //console.log(arr.splice(0,3));
+
+    //     console.table(arr.sort());
+
+    //     console.log(arrNum);
+    //     console.log(arrNum.reverse());
+        
+
+    //     let val6 = arrNum.sort(function(x, y){
+    //         return y - x;
+    //     });
+
+    //     console.table(val6);
+
+    //     document.querySelector('p').innerHTML = val6;
+
+    //     function under50(num){
+    //         return num < 50;
+    //     }
+
+    //     let val7 = arrNum.find(under50);
+    //    // document.querySelector('p').innerText = val7;
+    //    console.log(val7);
+
+    //    const people = [
+    //     {name: 'John', age: 30},
+    //     {name: 'Baishali', age: 39},
+    //     {name: 'Sanjib', age: 23}
+    //    ];
+
+    //    console.log(people[0].name);
+
+    //    let i;
+
+    //    for(i = 0; i < people.length; i++){
+    //     document.body.innerHTML += people[i].name + ' is of ' + people[i].age + '<br>'
+    //    }
+
+    //    const writer = {
+    //     firstName: 'Sanjib',
+    //     lastName: 'Adhya',
+    //     age: 39,
+    //     hobbies: ['music', 'gaming'],
+    //     getBirthYear: function(){
+    //         return 2022 - this.age;
+    //     }
+    //    }
+
+    //    console.log(writer.getBirthYear());
+    //    console.table(writer.hobbies);
+
+       const name = 'Rishan';
+       const age = 11;
+
+       const msg = document.querySelector('.title');
+
+    //    if(age < 15 && age >= 5){
+    //         msg.innerHTML = `${name} is a kid`;
+    //    }else if(age <= 20){
+    //     msg.innerHTML = `${name} is a boy`;
+    //    }else{
+    //     msg.innerHTML = `${name} is an adult`;
+    //    };
+
+// age >= 5 && age < 15 ? msg.innerHTML = `${name} is a kid` : msg.innerHTML = `${name} is an adult`;
+
+
+// const myName = '';
+
+// switch(myName){
+//     case 'Abhijit':
+//         console.log('My name is Abhijit');
+//         break;
+//     case 'Sanjib':
+//         console.log('My name is Sanjib');
+//         break;
+//     default:
+//         console.log('My name is Nimo');
+//         break;
+// }
+
+// function testFunc(x = 0){
+//     return x * x;
+// }
+
+// console.log(testFunc(2));
+
+// //IIFE
+// (function(name = 'Sanjib'){
+//     console.log('Hello ' + name);
+// })();
+
+
+const obj = {
+    add: function(){
+        console.log('This is an add message');
+        return 'This is an add message';
+    },
+
+    edit: function(id){
+        console.log(`this is ${id}`);
+    }
+};
+
+// for(let i = 0; i < msg.classList.length; i++){
+//     msg.innerHTML += `
+//     <ul>
+//             <li>${msg.classList[i]}</li>
+//     </ul>
+//     `
+// }
+
+msg.innerHTML = obj.edit(102);
+
+msg.innerHTML = msg.classList[0];
+
+function checkEqual(a, b){
+    return a >= b ? 'Not Equal' : 'Equal';
+}
+
+console.log(checkEqual(1,2));
+
+//for in loop
+// const user = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 40
+// }
+
+// for(let x in user){
+//     console.table(`${x}: ${user[x]}`);
+// }
+
+//console.log(window.navigator.userAgent);
+
+
+let scripts = document.scripts;
+
+const scriptsArr = Array.from(scripts);
+
+console.table(scriptsArr);
+
+    </script>
+</body>
+
+</html>
